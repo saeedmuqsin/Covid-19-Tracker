@@ -1,0 +1,54 @@
+.card {
+    margin: auto;
+    width: 450px;
+    margin-block: 7%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card .header {
+    padding: 10px;
+    margin: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header img {
+    height: 45px;
+    width: 75px;
+}
+
+.header p {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.card-content {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.card-content .stats-data {
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats-data span {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.stats-data svg {
+    color: rgba(4, 145, 4, 0.788);
+}
+
+.card .bottom {
+    display: block;
+    text-align: center;
+}

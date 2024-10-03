@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+{% block css %}
+<link rel="stylesheet" href="/static/css/country.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+{% endblock %} {% block content %}
+
+<div class="card">
+    <div class="header">
+        <p>{{ context.country_name.capitalize() }}</p>
+        <img src="https://www.worldometers.info{{ context.Country_Flag }}" alt="">
+    </div>
+
+    <div class="card-content">
+        <div class="stats-data m-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+            </svg>
+            <p class="m-1">Total Cases: <span>{{ context.total_cases }}</span></p>
+        </div>
+
+        <div class="stats-data m-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+              </svg>
+            <p class="m-1">Death Cases: <span>{{ context.death_cases }}</span></p>
+        </div>
+
+        <div class="stats-data m-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check-all" viewBox="0 0 16 16">
+                <path d="M8.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z"/>
+              </svg>
+            <p class="m-1">Recovered: <span>{{ context.recovered }}</span></p>
+        </div>
+    </div>
+    <div class="bottom">
+        <a href="https://covid19.healthdata.org/{{ context.country_name }}" class="button is-success">Check for more</a>
+    </div>
+</div>
+
+{% endblock %}

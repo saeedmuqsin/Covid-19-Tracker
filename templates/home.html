@@ -1,0 +1,135 @@
+{% extends 'base.html' %} {% block css %}
+<link rel="stylesheet" href="/static/css/home.css" />
+{% endblock %} {% block content %}
+<div class="precuation-section">
+  <h4>How to stop the spread of covid-19</h4>
+
+  <div class="precaution">
+    <img src="/static/images/washing-hands.png" alt="" />
+    <div class="body">
+      <h3 class="text-success">Washing the Hands.</h3>
+      To stop the spread of COVID-19, along with other COVID appropriate
+      behaviours, the practice of handwashing at regular intervals is a must,
+      after coughing or sneezing, when caring for the sick, after using the
+      toilet, before eating, while preparing food and after handling animals or
+      animal waste.
+    </div>
+  </div>
+
+  <div class="precaution">
+    <img
+      src="/static/images/covid-19-doctor-flu-mask-protection-wearing.247x256.png"
+      alt=""
+    />
+    <div class="body">
+      <h3 class="text-success">Effective wearing of Face mask</h3>
+      Face masks have been considered a first step to prevent and contain the
+      spread of the disease. Different types of masks are available on the
+      market for this purpose. Simple masks covering mouth and nose are
+      primarily used to prevent transmission by holding back droplets.
+    </div>
+  </div>
+
+  <div class="precaution">
+    <img src="/static/images/distance-keep-social.256x242.png" alt="" />
+    <div class="body">
+      <h3 class="text-success">Social distancing in gathers.</h3>
+      Why is social distancing important for Covid 19? Limiting our contact with
+      people will slow down virus transmission and flatten the epidemic curve so
+      that we can reduce the number of cases occurring at the peak of the
+      epidemic.
+    </div>
+  </div>
+</div>
+
+<div class="mt-2 cases-section">
+  <h3>Total Cases of the pandemic across the world.</h3>
+  <div class="cases-inner-box my-4">
+    <div class="case-box bg-light">
+      <svg
+        width="46"
+        height="46"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M9.172 16.172a4 4 0 0 1 5.656 0"></path>
+        <path d="M9 10h.01"></path>
+        <path d="M15 10h.01"></path>
+        <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+      </svg>
+      <p class="case-value text-success">{{ context.covidcases }}</p>
+      <p class="case-text">Total Cases</p>
+    </div>
+
+    <div class="case-box bg-light">
+      <svg
+        width="46"
+        height="46"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.703 19c.46 0 .797-.415.797-.862 0-.999-1.5-1.638-1.5-1.638s-1.5.68-1.5 1.638c0 .447.336.862.797.862.32 0 .557-.186.703-.45.146.264.384.45.703.45Z"
+        ></path>
+        <path
+          d="M11 14c0 1.38-1.007 2.5-2.25 2.5S6.5 15.38 6.5 14s1.007-2.5 2.25-2.5S11 12.62 11 14Z"
+        ></path>
+        <path
+          d="M15.25 16.5c1.243 0 2.25-1.12 2.25-2.5s-1.007-2.5-2.25-2.5S13 12.62 13 14s1.007 2.5 2.25 2.5Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M6.577 18.001c-1.2 0-1.191-.299-1.156-1.522.007-.24.015-.517.015-.834 0-.763-.225-1.123-.497-1.559C4.524 13.421 4 12.58 4 9.862c0-9.15 16-9.15 16 0 0 2.718-.524 3.56-.94 4.224-.271.436-.496.796-.496 1.56 0 .316.008.592.015.833.035 1.223.044 1.522-1.156 1.522-1.436 0-1.436 1.285-1.436 2.142S14.051 21 12 21s-3.987 0-3.987-.857 0-2.142-1.436-2.142Zm0-1a4.59 4.59 0 0 1-.166-.003l.001-.155.008-.308c.007-.25.016-.561.016-.89 0-1.075-.395-1.697-.683-2.15-.06-.095-.116-.182-.162-.265C5.337 12.775 5 11.99 5 9.862c0-1.958.84-3.386 2.106-4.351C8.4 4.524 10.176 4 12 4c1.825 0 3.6.524 4.894 1.51C18.16 6.477 19 7.905 19 9.863c0 2.13-.337 2.913-.591 3.368-.046.082-.102.17-.162.265-.288.453-.683 1.075-.683 2.15 0 .329.009.64.016.89.003.118.007.223.008.308l.001.155a4.588 4.588 0 0 1-.166.003c-.51 0-.983.116-1.383.381-.4.266-.647.628-.796.982-.21.5-.248 1.061-.255 1.466a3.1 3.1 0 0 1-.37.073c-.652.095-1.566.097-2.619.097-1.053 0-1.967-.002-2.62-.097a3.097 3.097 0 0 1-.369-.073c-.007-.405-.046-.965-.255-1.465a2.158 2.158 0 0 0-.796-.983c-.4-.265-.873-.38-1.383-.38Z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <p class="case-value text-success">{{ context.deathcases }}</p>
+      <p class="case-text">Death Cases</p>
+    </div>
+
+    <div class="case-box bg-light">
+      <svg
+        width="46"
+        height="46"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm0 1a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"
+          clip-rule="evenodd"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M10.643 10.624c.054.2.073.418.008.597a.25.25 0 0 1-.364.128c-.13-.079-.26-.18-.383-.278l-.097-.08a8.038 8.038 0 0 0-.267-.212c-.251-.187-.45-.286-.623-.278-.18.01-.4.136-.68.358a8.43 8.43 0 0 0-.253.207 6.379 6.379 0 0 1-.604.466.25.25 0 0 1-.383-.177c-.025-.182.013-.41.085-.633a2.78 2.78 0 0 1 .347-.708c.31-.453.813-.88 1.487-.853.65.028 1.132.409 1.422.824.146.208.249.431.305.64Z"
+          clip-rule="evenodd"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M13.315 10.624c-.054.2-.073.418-.008.597a.25.25 0 0 0 .364.128c.13-.079.26-.18.383-.278l.097-.08c.09-.073.178-.144.267-.212.251-.187.45-.286.623-.278.18.01.4.136.68.358.08.062.165.133.253.207.194.162.404.338.604.466a.25.25 0 0 0 .383-.177c.024-.182-.013-.41-.085-.633a2.782 2.782 0 0 0-.347-.708c-.31-.453-.813-.88-1.487-.853-.65.028-1.132.409-1.422.824a2.088 2.088 0 0 0-.305.64Z"
+          clip-rule="evenodd"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M12 18.5c-2.02 0-3.77-1.524-4.63-3.75a9.008 9.008 0 0 1-.024-.064c-.224-.596.254-1.186.89-1.186h7.527c.637 0 1.115.59.89 1.186a7.12 7.12 0 0 1-.024.064c-.86 2.226-2.61 3.75-4.63 3.75Zm3.638-3.964c-.15.364-.325.698-.518 1H8.88a6.232 6.232 0 0 1-.457-.857v-.143h7.215Z"
+          clip-rule="evenodd"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          d="M15.636 16.536c.113-.147.222-.301.325-.462a7.309 7.309 0 0 0 .692-1.388c.192-.51-.129-1.014-.623-1.15a.998.998 0 0 0-.267-.036H8.236a.998.998 0 0 0-.266.036.945.945 0 0 0-.547.399.83.83 0 0 0-.077.75 9.008 9.008 0 0 0 .161.396 7.169 7.169 0 0 0 .857 1.455C9.3 17.75 10.584 18.5 12 18.5c1.415 0 2.699-.75 3.636-1.964Zm.002-2a6.394 6.394 0 0 1-.518 1H8.88a6.232 6.232 0 0 1-.457-.857v-.143h7.215Z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+      <p class="case-value text-success">{{ context.recovered }}</p>
+      <p class="case-text">Total Recovery</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
